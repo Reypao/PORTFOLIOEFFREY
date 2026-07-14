@@ -1,12 +1,13 @@
 :root {
     --ink: #0c1a2a;
     --soft: #526071;
-    --navy: #071827;
+    --navy: #2f3302;
     --paper: #f4f5f1;
     --white: #fff;
     --accent: #52e0bc;
     --line: #d9dedb;
     --sidebar: 288px;
+    --peach: rgba(190, 108, 70, 0.542);
 }
 
 * { 
@@ -36,9 +37,25 @@ button, input, textarea {
     font: inherit; 
 }
 
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-.skip-link { position: fixed; top: 12px; left: 12px; z-index: 200; transform: translateY(-150%); background: white; padding: 12px 18px; border-radius: 30px; font-weight: 700; }
-.skip-link:focus { transform: translateY(0); }
+:focus-visible { 
+    outline: 3px solid var(--accent); 
+    outline-offset: 4px; 
+}
+
+.skip-link { 
+    position: fixed; 
+    top: 12px; 
+    left: 12px; 
+    z-index: 200; transform: translateY(-150%); 
+    background: white; 
+    padding: 12px 18px; 
+    border-radius: 30px; 
+    font-weight: 700; 
+}
+
+.skip-link:focus { 
+    transform: translateY(0); 
+}
 
 .sidebar {
     position: fixed;
@@ -95,10 +112,36 @@ button, input, textarea {
 .brand small { margin-top: 3px; color: #9fb0bc; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 .availability { display: flex; align-items: center; gap: 9px; margin-top: 65px; color: #9fb0bc; font-size: 11px; }
 .availability span { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(82, 224, 188, .12); }
-.nav-links { display: grid; gap: 5px; margin: 35px 0 0; padding: 0; list-style: none; }
-.nav-links a { position: relative; display: flex; gap: 14px; border-radius: 10px; padding: 14px 13px; color: #9fb0bc; font-size: 14px; font-weight: 700; transition: .2s; }
-.nav-links a span { color: #607586; font-size: 10px; }
-.nav-links a:hover, .nav-links a.active { transform: translateX(3px); background: #0d2638; color: white; }
+
+.nav-links { 
+    display: grid; 
+    gap: 5px; 
+    margin: 35px 0 0; 
+    padding: 0; 
+    list-style: none; 
+}
+
+.nav-links a { 
+    position: relative; 
+    display: flex; 
+    gap: 14px; border-radius: 10px; padding: 14px 13px; 
+    color: #9fb0bc; 
+    font-size: 14px; 
+    font-weight: 700; 
+    transition: .2s; }
+
+.nav-links a span { 
+    color: #8d5121; 
+    font-size: 10px; 
+}
+
+
+.nav-links a:hover, .nav-links a.active { 
+    transform: translateX(3px); 
+    background: #2f3302; 
+    color: white; 
+}
+
 .nav-links a.active::after { position: absolute; top: 50%; right: 12px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); content: ""; }
 .sidebar-footer { margin-top: auto; color: #718697; font-size: 11px; line-height: 1.7; }
 .sidebar-footer p { margin: 0; }
@@ -134,7 +177,15 @@ button, input, textarea {
     width: min(100%, 680px);
 }
 
-.eyebrow { margin: 0 0 22px; color: #3c675f; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow { 
+    margin: 0 0 22px; 
+    color: var(--peach); 
+    font-size: 11px; 
+    font-weight: 800; 
+    letter-spacing: .16em; 
+    text-transform: uppercase; 
+}
+
 .home h1 { 
     margin: 0; 
     font-size: clamp(52px, 6.5vw, 104px); 
@@ -147,9 +198,34 @@ button, input, textarea {
     color: #799087; 
 }
 
-.hero-copy { max-width: 640px; margin-top: 32px; color: var(--soft); font-size: clamp(17px, 1.55vw, 20px); line-height: 1.75; }
+.hero-copy { 
+    max-width: 640px; 
+    margin-top: 32px; 
+    color: var(--peach); 
+    font-size: clamp(17px, 1.55vw, 20px); 
+    line-height: 1.75; 
+}
+
 .hero-actions { display: flex; align-items: center; gap: 30px; margin-top: 38px; }
-.btn { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 28px; border: 0; border-radius: 30px; background: var(--navy); padding: 0 24px; color: white; cursor: pointer; font-size: 13px; font-weight: 800; box-shadow: 0 12px 32px rgba(7, 24, 39, .17); transition: .2s; }
+
+.btn { 
+    display: inline-flex; 
+    min-height: 54px; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 28px; 
+    border: 0; 
+    border-radius: 30px; 
+    background: var(--navy); 
+    padding: 0 24px; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 13px; 
+    font-weight: 800; 
+    box-shadow: 0 12px 32px rgba(7, 24, 39, .17); 
+    transition: .2s; 
+}
+
 .btn:hover { transform: translateY(-2px); background: #123044; }
 .btn span { color: var(--accent); }
 .text-link { border-bottom: 1px solid #aab3b0; padding: 7px 0; font-size: 13px; font-weight: 800; }
