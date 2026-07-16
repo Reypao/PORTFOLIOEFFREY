@@ -1,13 +1,13 @@
 :root {
     --ink: #0c1a2a;
     --soft: #526071;
-    --navy: #2f3302;
+    --olive: #2f3302;
     --paper: #f4f5f1;
     --white: #fff;
     --accent: #52e0bc;
     --line: #d9dedb;
     --sidebar: 288px;
-    --peach: rgba(190, 108, 70, 0.542);
+    --peach: #9c4e2f;
 }
 
 * {
@@ -126,13 +126,13 @@ textarea {
 }
 
 .brand strong {
-    font-size: 15px;
+    font-size: 19px;
 }
 
 .brand small {
     margin-top: 3px;
     color: #9fb0bc;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: .12em;
     text-transform: uppercase;
 }
@@ -169,7 +169,7 @@ textarea {
     border-radius: 10px;
     padding: 14px 13px;
     color: #9fb0bc;
-    font-size: 14px;
+    font-size: 23px;
     font-weight: 700;
     transition: .2s;
 }
@@ -200,8 +200,8 @@ textarea {
 
 .sidebar-footer {
     margin-top: auto;
-    color: #718697;
-    font-size: 11px;
+    color: #9c4e2f;
+    font-size: 20px;
     line-height: 1.7;
 }
 
@@ -222,7 +222,7 @@ textarea {
 .home {
     position: relative;
     display: flex;
-    min-height: 100vh;
+    min-height: 102vh;
     align-items: center;
 
     background-image:
@@ -249,22 +249,137 @@ textarea {
 .eyebrow {
     margin: 0 0 22px;
     color: var(--peach);
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 800;
     letter-spacing: .16em;
     text-transform: uppercase;
 }
 
+/* ==============================
+   TÍTULO PRINCIPAL DEL HOME
+================================= */
+
 .home h1 {
     margin: 0;
-    font-size: clamp(52px, 6.5vw, 104px);
-    letter-spacing: -.065em;
-    line-height: .77;
+    font-size: clamp(52px, 6.5vw, 135px);
+    letter-spacing: -0.065em;
+    line-height: 0.77;
 }
 
-.home h1 span {
+/* Cada fragmento ocupa su propia línea */
+
+.hero-title span {
     display: block;
+}
+
+/* Primera parte blanca */
+
+.title-white {
+    color: #ffffff;
+}
+
+/* Segunda parte verde grisáceo */
+
+.title-green {
     color: #799087;
+}
+
+/* ==============================
+   ANIMACIÓN SECUENCIAL DEL HERO
+================================= */
+
+.hero-carousel {
+    overflow: visible;
+}
+
+/* Estado inicial de cada fragmento */
+
+.hero-fragment {
+    opacity: 0;
+    transform: translateX(-90px);
+    filter: blur(5px);
+    animation-name: heroSlideSequence;
+    animation-duration: 9s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+/* Fragmento 1:
+   Desarrollador web...
+*/
+
+.fragment-one {
+    animation-delay: 0s;
+}
+
+/* Fragmento 2:
+   Construyo sitios web
+*/
+
+.fragment-two {
+    animation-delay: 0.45s;
+}
+
+/* Fragmento 3:
+   claros, modernos...
+*/
+
+.fragment-three {
+    animation-delay: 0.9s;
+}
+
+/* Fragmento 4:
+   Botones
+*/
+
+.fragment-four {
+    animation-delay: 1.35s;
+}
+
+/* Movimiento completo */
+
+@keyframes heroSlideSequence {
+
+    /* Oculto al comenzar */
+
+    0% {
+        opacity: 0;
+        transform: translateX(-90px);
+        filter: blur(5px);
+    }
+
+    /* Entra desde la izquierda */
+
+    8% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+
+    /* Permanece visible */
+
+    78% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+
+    /* Sale ligeramente hacia la derecha */
+
+    91% {
+        opacity: 0;
+        transform: translateX(45px);
+        filter: blur(3px);
+    }
+
+    /* Se prepara para comenzar otra vez */
+
+    100% {
+        opacity: 0;
+        transform: translateX(-90px);
+        filter: blur(5px);
+    }
 }
 
 .hero-copy {
@@ -284,17 +399,17 @@ textarea {
 
 .btn {
     display: inline-flex;
-    min-height: 54px;
+    min-height: 74px;
     align-items: center;
     justify-content: center;
     gap: 28px;
-    border: 0;
+    border: 1;
     border-radius: 30px;
-    background: var(--navy);
+    background: var(--olive);
     padding: 0 24px;
     color: white;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 23px;
     font-weight: 800;
     box-shadow: 0 12px 32px rgba(7, 24, 39, .17);
     transition: .2s;
@@ -302,7 +417,7 @@ textarea {
 
 .btn:hover {
     transform: translateY(-2px);
-    background: #123044;
+    background: #783d22bd;
 }
 
 .btn span {
