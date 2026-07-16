@@ -403,14 +403,13 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 28px;
-    border: 1;
     border-radius: 30px;
     background: var(--olive);
     padding: 0 24px;
     color: white;
     cursor: pointer;
     font-size: 23px;
-    font-weight: 800;
+    font-weight: 500;
     box-shadow: 0 12px 32px rgba(7, 24, 39, .17);
     transition: .2s;
 }
@@ -664,6 +663,8 @@ footer a {
     display: none;
 }
 
+/* Tablet size */
+
 @media (max-width: 880px) {
     .mobile-header {
         position: fixed;
@@ -780,7 +781,15 @@ footer a {
     }
 }
 
+/* mobile size */
+
 @media (max-width: 560px) {
+    
+    .btn {
+        font-size: 30px;
+
+    }
+    
     .home {
         position: relative;
         min-height: calc(100vh - 74px);
@@ -826,7 +835,7 @@ footer a {
     .home .hero-copy {
         margin-top: 22px;
         color: #d7d7d7;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.5;
     }
 
@@ -840,7 +849,8 @@ footer a {
     .hero-actions .btn {
         min-height: 46px;
         padding: 0 18px;
-        font-size: 11px;
+        font-size: 16px;
+        letter-spacing: 1;
     }
 
     .text-link {
