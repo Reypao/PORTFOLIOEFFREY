@@ -230,12 +230,11 @@ textarea {
 
     background-image:
         linear-gradient(90deg,
-        rgba(5, 7, 6, 0.80) 0%,
-        rgba(5, 7, 6, 0.55) 45%,
-        rgba(5, 7, 6, 0.15) 72%,
-        rgba(5, 7, 6, 0.02) 90%,
-        transparent 100%
-        ),
+        rgba(0,0,0,.72) 0%,
+        rgba(0,0,0,.42) 35%,
+        rgba(0,0,0,.12) 60%,
+        rgba(0,0,0,0) 85%
+    ),
         url("../imagen/imagenPortafolio1.png");
 
     background-repeat: no-repeat;
