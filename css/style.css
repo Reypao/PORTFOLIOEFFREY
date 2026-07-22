@@ -2,7 +2,7 @@
     --ink: #0c1a2a;
     --soft: #526071;
     --olive: #2f3302;
-    --paper: #f4f5f1;
+    --paper: #e1e9cb95;
     --white: #fff;
     --accent: #52e0bc;
     --line: #d9dedb;
@@ -203,7 +203,7 @@ textarea {
 .nav-links a:hover,
 .nav-links a.active {
     transform: translateX(3px);
-    background: #2f3302;
+    background: #779087;
     color: white;
 }
 
