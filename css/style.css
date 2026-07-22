@@ -140,6 +140,22 @@ textarea {
 
 }
 
+.brand-text{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.brand-text strong{
+    white-space:nowrap;
+}
+
+.brand-text small{
+    white-space:nowrap;
+    letter-spacing:0;
+    text-transform:none;
+}
+
 .availability {
     display: flex;
     align-items: center;
