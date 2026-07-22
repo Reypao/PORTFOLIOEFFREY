@@ -3,8 +3,7 @@ const sidebar = document.querySelector('.sidebar');
 const overlay = document.querySelector('.menu-overlay');
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('main section[id]');
-const contactForm = document.querySelector('.contact-form');
-const formStatus = document.querySelector('.form-status');
+
 
 function setMenu(open) {
     sidebar.classList.toggle('is-open', open);
@@ -47,9 +46,4 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-// Validación visual. Aquí puedes conectar EmailJS, Formspree o tu backend.
-contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    formStatus.textContent = '¡Gracias! El formulario está validado y listo para conectar a tu correo.';
-    contactForm.reset();
-});
+
