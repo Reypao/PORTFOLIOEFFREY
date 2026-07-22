@@ -142,8 +142,9 @@ textarea {
 
 .brand-text{
     display:flex;
-    align-items:center;
-    gap:14px;
+    flex-direction: column;
+    gap:6px;
+    margin-left: 1em;
 }
 
 .brand-text strong{
