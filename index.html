@@ -1,212 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Efrey Guzmán, desarrollador web.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio de Efrey Guzmán, desarrollador web."
+    />
     <title>EFFREY GUZMAN | Web Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
     <!-- Encabezado visible solamente en mobile -->
     <header class="mobile-header">
-        <a class="brand" href="#home" aria-label="Ir al inicio">
-            <span class="brand-mark">EG</span>
-            <span><strong>EFFREY GUZMAN</strong></span>
-            <span class="subtitle">- Web Developer</span>
-        </a>
+      <a class="brand" href="#home" aria-label="Ir al inicio">
+        <span class="brand-mark">EG</span>
+        <span><strong>EFFREY GUZMAN</strong></span>
+        <span class="subtitle">- Web Developer</span>
+      </a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation"
-            aria-expanded="false">
-            <span></span>
-            <span></span>
-        </button>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
     <div class="page-container">
-        <!-- Navegación lateral en desktop / menú deslizable en mobile -->
-        <aside class="sidebar">
-            <nav class="navbar" id="main-navigation" aria-label="Navegación principal">
-                <a class="brand desktop-brand" href="#home">
-                    <span class="brand-mark">EG</span>
-                    <div class="brand-text">
+      <!-- Navegación lateral en desktop / menú deslizable en mobile -->
+      <aside class="sidebar">
+        <nav
+          class="navbar"
+          id="main-navigation"
+          aria-label="Navegación principal"
+        >
+          <a class="brand desktop-brand" href="#home">
+            <span class="brand-mark">EG</span>
+            <div class="brand-text">
+              <strong>EFFREY GUZMAN</strong>
 
-                         <strong>EFFREY GUZMAN</strong>
+              <small>Web Developer</small>
+            </div>
+          </a>
 
-                         <small>Web Developer</small>
+          <p class="availability">
+            <span></span>Disponible para nuevos proyectos
+          </p>
 
-                    </div>
-                </a>
+          <ul class="nav-links">
+            <li>
+              <a class="active" href="#home"><span>01</span>Inicio</a>
+            </li>
+            <li>
+              <a href="#portafolio"><span>02</span>Portafolio</a>
+            </li>
+            <li>
+              <a href="#contact"><span>03</span>Contacto</a>
+            </li>
+          </ul>
 
-                <p class="availability"><span></span>Disponible para nuevos proyectos</p>
+          <div class="sidebar-footer">
+            <p>Salt Lake City, Utah</p>
+            <p>Español · English</p>
+          </div>
+        </nav>
+      </aside>
 
-                <ul class="nav-links">
-                    <li><a class="active" href="#home"><span>01</span>Inicio</a></li>
-                    <li><a href="#portafolio"><span>02</span>Portafolio</a></li>
-                    <li><a href="#contact"><span>03</span>Contacto</a></li>
+      <button
+        class="menu-overlay"
+        type="button"
+        aria-label="Cerrar menú"
+      ></button>
+
+      <main class="main-content" id="main-content">
+        <!-- Home -->
+        <section class="section home" id="home">
+          <div class="home-content hero-carousel">
+            <!-- Fragmento 1 -->
+            <p class="eyebrow hero-fragment fragment-one">
+              Desarrollador web · Diseñador de experiencias
+            </p>
+
+            <!-- Título -->
+            <h1 class="hero-title">
+              <!-- Fragmento 2 -->
+              <span class="hero-fragment fragment-two title-white">
+                Construyo sitios web
+              </span>
+
+              <!-- Fragmento 3 -->
+              <span class="hero-fragment fragment-three title-green">
+                claros, modernos y dinámicos.
+              </span>
+            </h1>
+
+            <!-- Botones -->
+            <div class="hero-actions hero-fragment fragment-four">
+              <a class="btn" href="#portafolio">
+                Ver mis proyectos <span>↘</span>
+              </a>
+
+              <a class="btn btn-outline contact-buttom" href="#contact">
+                Contactarme <span>→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portafolio -->
+        <section class="section portfolio" id="portafolio">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Trabajo seleccionado</p>
+              <h2>Proyectos que combinan función y diseño.</h2>
+            </div>
+            <p>
+              Cada proyecto representa una oportunidad para resolver un problema
+              real y mejorar su experiencia como usuario.
+            </p>
+          </div>
+
+          <div class="projects-container">
+            <article class="project-card">
+              <div class="project-visual sprinkler">
+                <span>SprinklerUSA</span>
+              </div>
+              <div class="project-info">
+                <small>01 · DISEÑO WEB RESPONSIVE</small>
+                <h3>SprinklerUSA</h3>
+                <p>
+                  Sitio para presentar servicios de diseño, instalación y
+                  consultoría de sistemas de riego.
+                </p>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
                 </ul>
+              </div>
+            </article>
 
-                <div class="sidebar-footer">
-                    <p>Salt Lake City, Utah</p>
-                    <p>Español · English</p>
-                </div>
-            </nav>
-        </aside>
+            <article class="project-card">
+              <div class="project-visual elite">
+                <span>Elite Training LLC</span>
+              </div>
+              <div class="project-info">
+                <small>02 · LANDING PAGE PROFESIONAL</small>
+                <h3>Elite Training LLC</h3>
+                <p>
+                  Experiencia moderna para presentar cursos de CPR, primeros
+                  auxilios y flebotomía.
+                </p>
+                <ul>
+                  <li>Responsive</li>
+                  <li>UI Design</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </article>
 
-        <button class="menu-overlay" type="button" aria-label="Cerrar menú"></button>
+            <article class="project-card">
+              <div class="project-visual brujita"><span>La Brujita</span></div>
+              <div class="project-info">
+                <small>03 · APLICACIÓN WEB</small>
+                <h3>La Brujita</h3>
+                <p>
+                  Interfaz de servicios financieros diseñada para guiar al
+                  usuario hacia una solicitud sencilla.
+                </p>
+                <ul>
+                  <li>Angular</li>
+                  <li>CSS</li>
+                  <li>UX</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <main class="main-content" id="main-content">
-            <!-- Home -->
-            <section class="section home" id="home">
-                <div class="home-content hero-carousel">
+        <!-- Contacto -->
+        <section class="section contact" id="contact">
+          <div class="contact-copy">
+            <p class="eyebrow">Contacto</p>
+            <h3>
+              <span>¿Tienes una idea?</span>
+              <span class="contact-title">Trabajemos juntos.. </span>
+            </h3>
+            <p class="hero-copy">
+              Soy Effrey Guzmán, estudiante de desarrollo de software con
+              experiencia creando proyectos responsive con HTML, CSS, JavaScript
+              y Angular.
+            </p>
+            <ul class="skills" aria-label="Tecnologías principales">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Angular</li>
+            </ul>
+          </div>
 
-                    <!-- Fragmento 1 -->
-                    <p class="eyebrow hero-fragment fragment-one">
-                        Desarrollador web · Diseñador de experiencias
-                    </p>
+          <form class="contact-form" id="contact-form">
+            <div
+              class="form-success-overlay"
+              id="form-success-overlay"
+              role="status"
+              aria-live="polite"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <span class="success-icon" aria-hidden="true">✓</span>
 
-                    <!-- Título -->
-                    <h1 class="hero-title">
+              <h3>¡Mensaje enviado correctamente!</h3>
 
-                        <!-- Fragmento 2 -->
-                        <span class="hero-fragment fragment-two title-white">
-                            Construyo sitios web
-                        </span>
+              <p>
+                Gracias por contactarme.<br />
+                Te responderé lo antes posible.
+              </p>
+            </div>
 
-                        <!-- Fragmento 3 -->
-                        <span class="hero-fragment fragment-three title-green">
-                            claros, modernos y dinámicos.
-                        </span>
+            <div class="form-field">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="nombre@correo.com"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Cuéntame sobre tu proyecto…"
+                required
+              ></textarea>
+            </div>
+            <button class="btn" type="submit" id="submit-button">
+              Enviar mensaje <span>↗</span>
+            </button>
+            <p class="form-status" aria-live="polite" id="form-status"></p>
+          </form>
+        </section>
 
-                    </h1>
-
-                    <!-- Botones -->
-                    <div class="hero-actions hero-fragment fragment-four">
-                        <a class="btn" href="#portafolio">
-                            Ver mis proyectos <span>↘</span>
-                        </a>
-
-                        <a class="btn btn-outline contact-buttom" href="#contact">
-                            Contactarme <span>→</span>
-                        </a>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- Portafolio -->
-            <section class="section portfolio" id="portafolio">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">Trabajo seleccionado</p>
-                        <h2>Proyectos que combinan función y diseño.</h2>
-                    </div>
-                    <p>Cada proyecto representa una oportunidad para resolver un problema real y mejorar su experiencia
-                        como usuario.</p>
-                </div>
-
-                <div class="projects-container">
-                    <article class="project-card">
-                        <div class="project-visual sprinkler"><span>SprinklerUSA</span></div>
-                        <div class="project-info">
-                            <small>01 · DISEÑO WEB RESPONSIVE</small>
-                            <h3>SprinklerUSA</h3>
-                            <p>Sitio para presentar servicios de diseño, instalación y consultoría de sistemas de riego.
-                            </p>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-visual elite"><span>Elite Training LLC</span></div>
-                        <div class="project-info">
-                            <small>02 · LANDING PAGE PROFESIONAL</small>
-                            <h3>Elite Training LLC</h3>
-                            <p>Experiencia moderna para presentar cursos de CPR, primeros auxilios y flebotomía.</p>
-                            <ul>
-                                <li>Responsive</li>
-                                <li>UI Design</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-visual brujita"><span>La Brujita</span></div>
-                        <div class="project-info">
-                            <small>03 · APLICACIÓN WEB</small>
-                            <h3>La Brujita</h3>
-                            <p>Interfaz de servicios financieros diseñada para guiar al usuario hacia una solicitud
-                                sencilla.</p>
-                            <ul>
-                                <li>Angular</li>
-                                <li>CSS</li>
-                                <li>UX</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Contacto -->
-            <section class="section contact" id="contact">
-                <div class="contact-copy">
-                    <p class="eyebrow">Contacto</p>
-                    <h3>
-                        <span>¿Tienes una idea?</span>
-                        <span class="contact-title">Trabajemos juntos.. </span>
-                    </h3>
-                    <p class="hero-copy">
-                        Soy Effrey Guzmán, estudiante de desarrollo de software con experiencia
-                        creando proyectos responsive con HTML, CSS, JavaScript y Angular.
-                    </p>
-                    <ul class="skills" aria-label="Tecnologías principales">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Angular</li>
-                    </ul>
-                </div>
-
-                <form class="contact-form" id="contact-form">
-                    <div class="form-field">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" autocomplete="email" placeholder="nombre@correo.com" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto…" required></textarea>
-                    </div>
-                    <button class="btn" type="submit" id="submit-button">Enviar mensaje <span>↗</span></button>
-                    <p class="form-status" aria-live="polite" id="form-status"></p>
-                </form>
-            </section>
-
-            <footer>
-                <p>&copy; 2026 Efrey Guzmán. Todos los derechos reservados.</p>
-                <a href="#home">Volver arriba ↑</a>
-            </footer>
-        </main>
+        <footer>
+          <p>&copy; 2026 Efrey Guzmán. Todos los derechos reservados.</p>
+          <a href="#home">Volver arriba ↑</a>
+        </footer>
+      </main>
     </div>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/form.js"></script>
-</body>
-
+  </body>
 </html>
