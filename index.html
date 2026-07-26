@@ -16,7 +16,6 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
@@ -196,10 +195,20 @@
         <section class="section contact" id="contact">
           <div class="contact-copy">
             <p class="eyebrow">Contacto</p>
-            <h3>
-              <span>¿Tienes una idea?</span>
-              <span class="contact-title">Trabajemos juntos.. </span>
-            </h3>
+            <div class="contact-animation">
+              <video
+                class="contact-animation__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                aria-label="¿Tienes una idea? Trabajemos juntos"
+              >
+                <source src="./video/idea-animada.mp4" type="video/mp4" />
+                Tu navegador no permite reproducir este video.
+              </video>
+            </div>
             <p class="hero-copy">
               Soy Effrey Guzmán, estudiante de desarrollo de software con
               experiencia creando proyectos responsive con HTML, CSS, JavaScript
@@ -214,7 +223,14 @@
           </div>
 
           <form class="contact-form" id="contact-form">
-            <div class="form-success-overlay" id="form-success-overlay" role="status" aria-live="polite" aria-hidden="true" tabindex="-1">
+            <div
+              class="form-success-overlay"
+              id="form-success-overlay"
+              role="status"
+              aria-live="polite"
+              aria-hidden="true"
+              tabindex="-1"
+            >
               <span class="success-icon" aria-hidden="true">✓</span>
               <h3>¡Mensaje enviado correctamente!</h3>
               <p>
