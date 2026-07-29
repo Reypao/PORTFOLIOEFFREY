@@ -1,6 +1,6 @@
 :root {
     --ink: #0c1a2a;
-    --soft: #36465b;
+    --soft: #0b1f39;
     --olive: #2f3302;
     --paper: #e1e9cb95;
     --white: #fff;
@@ -499,7 +499,7 @@ textarea {
     max-width: 1180px;
     grid-template-columns: 1.4fr .6fr;
     align-items: end;
-    gap: 70px;
+    gap: 39px;
     margin: 0 auto 62px;
 }
 
@@ -576,8 +576,8 @@ textarea {
 
 .project-info small {
     color: #687571;
-    font-size: 10px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 770;
     letter-spacing: .12em;
 }
 
@@ -719,7 +719,7 @@ textarea {
 .form-field label {
     display: block;
     margin-bottom: 9px;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 800;
 }
 
