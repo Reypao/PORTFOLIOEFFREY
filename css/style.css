@@ -9,6 +9,7 @@
   --sidebar: 288px;
   --peach: #9c4e2f;
   --primary-color: #789087;
+  --light-blue: #758f86;
 }
 
 * {
@@ -642,7 +643,7 @@ textarea {
 }
 
 .project-btn-primary {
-  background: var(--olive);
+  background: var(--light-blue);
   color: white;
 }
 
@@ -657,7 +658,7 @@ textarea {
 }
 
 .project-btn-secondary:hover {
-  background: var(--olive);
+  background: var(--light-blue);
   color: white;
 }
 
