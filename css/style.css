@@ -156,6 +156,29 @@ textarea {
   text-transform: none;
 }
 
+.lang-switcher {
+  display: flex;
+  gap: 12px;
+  margin-top: 45px;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  padding: 4px;
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+.lang-btn:hover, .lang-btn.active {
+  background-color: var(--ink);
+  opacity: 1;
+
+} 
+
 .availability {
   display: flex;
   align-items: center;
