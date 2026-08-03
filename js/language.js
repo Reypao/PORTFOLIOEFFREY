@@ -107,97 +107,121 @@
         }
       };
 
-      const languageButtons = document.querySelectorAll(".lang-btn");
+const languageButtons = document.querySelectorAll(".lang-btn");
 
-      function changeLanguage(language) {
-        const selectedTranslations = translations[language];
+function changeLanguage(language) {
+    const selectedTranslations = translations[language];
 
-        if (!selectedTranslations) {
-          return;
+    if (!selectedTranslations) {
+        return;
+    }
+
+    document.documentElement.lang =
+        language === "es" ? "es-CO" : "en-US";
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+
+        if (selectedTranslations[key]) {
+            element.textContent = selectedTranslations[key];
+        }
+    });
+
+    document.querySelectorAll("[data-i18n-text]").forEach((element) => {
+        const key = element.dataset.i18nText;
+        const translation = selectedTranslations[key];
+
+        if (!translation) {
+            return;
         }
 
-        document.documentElement.lang = language;
+        const textNode = Array.from(element.childNodes).find(
+            (node) =>
+                node.nodeType === Node.TEXT_NODE &&
+                node.textContent.trim()
+        );
 
-        document.querySelectorAll("[data-i18n]").forEach((element) => {
-          const key = element.dataset.i18n;
-
-          if (selectedTranslations[key]) {
-            element.textContent = selectedTranslations[key];
-          }
-        });
-
-        document.querySelectorAll("[data-i18n-text]").forEach((element) => {
-          const key = element.dataset.i18nText;
-          const translation = selectedTranslations[key];
-
-          if (!translation) {
-            return;
-          }
-
-          const textNode = Array.from(element.childNodes).find(
-            (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
-          );
-
-          if (textNode) {
+        if (textNode) {
             const hasLeadingSpace = /^\s/.test(textNode.textContent);
             const hasTrailingSpace = /\s$/.test(textNode.textContent);
+
             textNode.textContent =
-              `${hasLeadingSpace ? " " : ""}${translation}${hasTrailingSpace ? " " : ""}`;
-          }
-        });
-
-        document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
-          const key = element.dataset.i18nPlaceholder;
-
-          if (selectedTranslations[key]) {
-            element.placeholder = selectedTranslations[key];
-          }
-        });
-
-        document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-          const key = element.dataset.i18nAriaLabel;
-
-          if (selectedTranslations[key]) {
-            element.setAttribute("aria-label", selectedTranslations[key]);
-          }
-        });
-
-        document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
-          const key = element.dataset.i18nAlt;
-
-          if (selectedTranslations[key]) {
-            element.alt = selectedTranslations[key];
-          }
-        });
-
-        document.querySelectorAll("[data-i18n-content]").forEach((element) => {
-          const key = element.dataset.i18nContent;
-
-          if (selectedTranslations[key]) {
-            element.setAttribute("content", selectedTranslations[key]);
-          }
-        });
-
-        const menuToggle = document.querySelector(".menu-toggle");
-
-        if (menuToggle?.classList.contains("is-active")) {
-          menuToggle.setAttribute("aria-label", selectedTranslations.closeMenu);
+                `${hasLeadingSpace ? " " : ""}` +
+                `${translation}` +
+                `${hasTrailingSpace ? " " : ""}`;
         }
+    });
 
-        languageButtons.forEach((button) => {
-          const isActive = button.dataset.language === language;
-          button.classList.toggle("active", isActive);
-          button.setAttribute("aria-pressed", String(isActive));
+    document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach((element) => {
+            const key = element.dataset.i18nPlaceholder;
+
+            if (selectedTranslations[key]) {
+                element.placeholder = selectedTranslations[key];
+            }
         });
 
-        localStorage.setItem("portfolio-language", language);
-      }
+    document
+        .querySelectorAll("[data-i18n-aria-label]")
+        .forEach((element) => {
+            const key = element.dataset.i18nAriaLabel;
 
-      languageButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          changeLanguage(button.dataset.language);
+            if (selectedTranslations[key]) {
+                element.setAttribute(
+                    "aria-label",
+                    selectedTranslations[key]
+                );
+            }
         });
-      });
 
-      const savedLanguage = localStorage.getItem("portfolio-language") || "es";
-      changeLanguage(savedLanguage);
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+        const key = element.dataset.i18nAlt;
+
+        if (selectedTranslations[key]) {
+            element.alt = selectedTranslations[key];
+        }
+    });
+
+    document
+        .querySelectorAll("[data-i18n-content]")
+        .forEach((element) => {
+            const key = element.dataset.i18nContent;
+
+            if (selectedTranslations[key]) {
+                element.setAttribute(
+                    "content",
+                    selectedTranslations[key]
+                );
+            }
+        });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    if (menuToggle?.classList.contains("is-active")) {
+        menuToggle.setAttribute(
+            "aria-label",
+            selectedTranslations.closeMenu
+        );
+    }
+
+    languageButtons.forEach((button) => {
+        const isActive = button.dataset.language === language;
+
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    localStorage.setItem("portfolio-language", language);
+}
+
+languageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        changeLanguage(button.dataset.language);
+    });
+});
+
+const savedLanguage =
+    localStorage.getItem("portfolio-language") || "es";
+
+changeLanguage(savedLanguage);
