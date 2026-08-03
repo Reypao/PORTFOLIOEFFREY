@@ -159,28 +159,29 @@ textarea {
 /*Language*/
 
 .language-selector {
-    width: 270px;
+    width: 202px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: transparent;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
 }
 
 .language-btn {
     display: grid;
-    grid-template-columns: 32px 30px 1fr;
+    grid-template-columns: 34px 30px 1fr;
+    gap: 4px;
     width: 100%;
-    min-height: 52px;
+    min-height: 41px;
     padding: 10px 14px;
     align-items: center;
 
     border: none;
-    background-color: #ffffff;
+    background-color: transparent;
     color: #7c8798;
     cursor: pointer;
 
-    font-family: Arial, sans-serif;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 700;
     text-align: left;
@@ -191,23 +192,27 @@ textarea {
 }
 
 .language-btn:hover {
-    background-color: #e8f4fd;
+    background-color: transparent;
 }
 
 .language-btn.active {
-    background-color: #add8f7;
-    color: #68788c;
+    background-color: transparent;
+    color: white;
 }
 
 .language-code {
-    color: #159bd3;
+    color: #ebeff1;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .language-flag {
-    font-size: 20px;
-    line-height: 1;
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 .language-name {

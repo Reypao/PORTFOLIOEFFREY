@@ -51,45 +51,14 @@
     <div class="page-container">
       <!-- Navegación lateral en desktop / menú deslizable en mobile -->
       <aside class="sidebar">
-        <nav
-          class="navbar"
-          id="main-navigation"
-          aria-label="Navegación principal"
-          data-i18n-aria-label="mainNavigation"
-        >
+        <nav class="navbar" id="main-navigation" aria-label="Navegación principal" data-i18n-aria-label="mainNavigation">
           <a class="brand desktop-brand" href="#home">
             <span class="brand-mark">EG</span>
             <div class="brand-text">
               <strong>EFFREY GUZMAN</strong>
-
               <small>Web Developer</small>
             </div>
           </a>
-
-          <!-- Encabezado language -->
-          <div class="language-selector" aria-label="Seleccionar idioma">
-            <button
-              class="language-btn active"
-              type="button"
-              data-language="en"
-              aria-pressed="true"
-            >
-              <span class="language-code">US</span>
-              <span class="language-flag">🇺🇸</span>
-              <span class="language-name">English (US)</span>
-            </button>
-
-            <button
-              class="language-btn"
-              type="button"
-              data-language="es"
-              aria-pressed="false"
-            >
-              <span class="language-code">ES</span>
-              <span class="language-flag">🇨🇴</span>
-              <span class="language-name">Español(Col)</span>
-            </button>
-          </div>
 
           <p class="availability" data-i18n-text="availability">
             <span></span>Disponible para nuevos proyectos
@@ -112,6 +81,38 @@
               >
             </li>
           </ul>
+
+                    <!-- Encabezado language -->
+          <div class="language-selector" aria-label="Seleccionar idioma">
+            <button
+              class="language-btn active"
+              type="button"
+              data-language="en"
+              aria-pressed="true"
+            >
+              <img
+                class="language-flag"
+                src="imagen/united-states.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="language-name">English</span>
+            </button>
+
+            <button
+              class="language-btn"
+              type="button"
+              data-language="es"
+              aria-pressed="false">
+              <img
+                class="language-flag"
+                src="imagen/colombia.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="language-name">Español</span>
+            </button>
+          </div>
 
           <div class="sidebar-footer">
             <p>Salt Lake City, Utah</p>

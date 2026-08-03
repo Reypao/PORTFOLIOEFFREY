@@ -107,7 +107,7 @@
         }
       };
 
-const languageButtons = document.querySelectorAll(".lang-btn");
+const languageButtons = document.querySelectorAll(".language-btn");
 
 function changeLanguage(language) {
     const selectedTranslations = translations[language];
