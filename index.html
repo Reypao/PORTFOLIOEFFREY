@@ -368,8 +368,8 @@
                 rows="5"
                 placeholder="Cuéntame sobre tu proyecto…"
                 data-i18n-placeholder="messagePlaceholder"
-                required
-              ></textarea>
+                required>
+              </textarea>
             </div>
             <button class="btn" type="submit" id="submit-button" data-i18n="sendMessage">
               Enviar mensaje <span>↗</span>
@@ -378,9 +378,25 @@
           </form>
         </section>
 
-        <footer>
+        <footer class="site-footer">
+          <div class="footer-content">
+            <div class="footer-introduction">
+              <p class="eyebrow">Contacto directo</p>
+              <h3>Trabajamos Juntos?</h3>
+              <p>Puedes contactarme por via email or por telefono</p>
+            </div>
+            <div class="footer-contact-list">
+              <div class="footer-contact">
+                <span class="footer-contact-label">Correo</span>
+                <a href="mailto:efrey5guzman@gmail.com">efrey5guzman@gmail.com</a>
+                <button class="copy-button" type="button" data-copy="efrey5guzman@gmail.com">
+                  Copiar
+                </button>
+              </div>
+            </div>
+          </div>
           <p data-i18n="rights">&copy; 2026 Efrey Guzmán. Todos los derechos reservados.</p>
-          <a href="#home" data-i18n=" backToTop">Volver arriba ↑</a>
+          <a href="#home" data-i18n="backToTop">Volver arriba ↑</a>
         </footer>
       </main>
     </div>
