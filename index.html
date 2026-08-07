@@ -301,11 +301,10 @@
                 loop
                 playsinline
                 preload="auto"
-                data-i18n="contactVideoLabel"
-                aria-label="¿Tienes una idea? Trabajemos juntos"
-              >
+                data-i18n-aria-label="contactVideoLabel"
+                aria-label="¿Tienes una idea? Trabajemos juntos">
                 <source src="./video/idea-animada.mp4" type="video/mp4" data-i18n="videoFallback"/>
-                Tu navegador no permite reproducir este video.
+                <span data-i18n="videoFallback">Tu navegador no permite reproducir este video.</span>
               </video>
             </div>
             <p class="hero-copy" data-i18n="aboutMe">
@@ -313,7 +312,7 @@
               experiencia creando proyectos responsive con HTML, CSS, JavaScript
               y Angular.
             </p>
-            <ul class="skills" data-i18n="coreTechnologies" aria-label="Tecnologías principales">
+            <ul class="skills" data-i18n-aria-label="coreTechnologies" aria-label="Tecnologías principales">
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript</li>
@@ -346,6 +345,7 @@
                 name="name"
                 autocomplete="name"
                 placeholder="Tu nombre"
+                data-i18n-placeholder="namePlaceholder"
                 required
               />
             </div>
@@ -357,8 +357,8 @@
                 name="email"
                 autocomplete="email"
                 placeholder="nombre@correo.com"
-                required
-              />
+                data-i18n-placeholder="emailPlaceholder"
+                required/>
             </div>
             <div class="form-field">
               <label for="message" data-i18n="messageLabel">Mensaje</label>
@@ -367,6 +367,7 @@
                 name="message"
                 rows="5"
                 placeholder="Cuéntame sobre tu proyecto…"
+                data-i18n-placeholder="messagePlaceholder"
                 required
               ></textarea>
             </div>
