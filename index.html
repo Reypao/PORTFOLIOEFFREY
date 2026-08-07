@@ -6,8 +6,7 @@
     <meta
       name="description"
       data-i18n-content="metaDescription"
-      content="Portafolio de Effrey Guzmán, desarrollador web."
-    />
+      content="Portafolio de Effrey Guzmán, desarrollador web."/>
     <title>EFFREY GUZMAN | Web Developer</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -124,31 +123,30 @@
             <!-- Fragmento 1 -->
             <p
               class="eyebrow hero-fragment fragment-one"
-              data-i18n="heroEyebrow"
-            >
+              data-i18n="heroEyebrow">
               Desarrollador web · Diseñador de experiencias
             </p>
 
             <!-- Título -->
             <h1 class="hero-title">
               <!-- Fragmento 2 -->
-              <span class="hero-fragment fragment-two title-white">
+              <span class="hero-fragment fragment-two title-white" data-i18n="heroTitleOne">
                 Construyo sitios web
               </span>
 
               <!-- Fragmento 3 -->
-              <span class="hero-fragment fragment-three title-green">
+              <span class="hero-fragment fragment-three title-green" data-i18n="heroTitleTwo">
                 claros, modernos y dinámicos.
               </span>
             </h1>
 
             <!-- Botones -->
             <div class="hero-actions hero-fragment fragment-four">
-              <a class="btn" href="#portafolio">
+              <a class="btn" href="#portafolio" data-i18n="viewProjects">
                 Ver mis proyectos <span>↘</span>
               </a>
 
-              <a class="btn btn-outline contact-buttom" href="#contact">
+              <a class="btn btn-outline contact-buttom" href="#contact" data-i18n="contactMe">
                 Contactarme <span>→</span>
               </a>
             </div>
@@ -159,10 +157,10 @@
         <section class="section portfolio" id="portafolio">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Trabajo seleccionado</p>
-              <h2>Proyectos que combinan función y diseño.</h2>
+              <p class="eyebrow" data-i18n="selectedWork">Trabajo seleccionado</p>
+              <h2 data-i18n="portfolioTitle">Proyectos que combinan función y diseño.</h2>
             </div>
-            <p>
+            <p data-i18n="portfolioIntro">
               Cada proyecto representa una oportunidad para resolver un problema
               real y mejorar su experiencia como usuario.
             </p>
@@ -185,22 +183,22 @@
                   loading="lazy"
                 />
 
-                <span class="project-preview-overlay"> Ver proyecto </span>
+                <span class="project-preview-overlay" data-i18n="viewProject"> Ver proyecto </span>
               </a>
 
               <!-- Información del proyecto -->
-              <div class="project-info">
+              <div class="project-info" data-i18n="multiPageOne">
                 <small>01 · SITIO WEB MULTIPÁGINA</small>
 
                 <h3>ArqStudio & Design</h3>
 
-                <p>
+                <p data-i18n="arqStudioDescription">
                   Sitio web responsive para un estudio de arquitectura y diseño,
                   con portafolio de proyectos, servicios, galería interactiva y
                   formulario de contacto.
                 </p>
 
-                <ul aria-label="Tecnologías utilizadas">
+                <ul aria-label="Tecnologías utilizadas" data-i18n="technologiesUsed">
                   <li>HTML5</li>
                   <li>CSS3</li>
                   <li>JavaScript</li>
@@ -211,16 +209,14 @@
                     href="https://reypao.github.io/arqStudio-Desing/"
                     class="project-btn project-btn-primary"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer" data-i18n="viewWebsite">
                     Ver sitio
                   </a>
                   <a
                     href="https://github.com/Reypao/arqStudio-Desing"
                     class="project-btn project-btn-secondary"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer" data-i18n="viewCode">
                     Ver código
                   </a>
                 </div>
@@ -248,12 +244,12 @@
               </a>
 
               <!-- Información del proyecto -->
-              <div class="project-info">
+              <div class="project-info" data-i18n="multiPageTwo">
                 <small>02 · SITIO WEB MULTIPÁGINA</small>
 
                 <h3>Elite Training LLC</h3>
 
-                <p>
+                <p data-i18n="eliteTrainingDescription">
                   Sitio web profesional y responsive para presentar cursos de
                   CPR, primeros auxilios y flebotomía, con calendario de
                   capacitaciones, testimonios y formulario de contacto.
@@ -293,7 +289,7 @@
         <!-- Contacto -->
         <section class="section contact" id="contact">
           <div class="contact-copy">
-            <p class="eyebrow">Contacto</p>
+            <p class="eyebrow" data-i18n="contact">Contacto</p>
             <div class="contact-animation">
               <video
                 class="contact-animation__video"
@@ -302,18 +298,19 @@
                 loop
                 playsinline
                 preload="auto"
+                data-i18n="contactVideoLabel"
                 aria-label="¿Tienes una idea? Trabajemos juntos"
               >
-                <source src="./video/idea-animada.mp4" type="video/mp4" />
+                <source src="./video/idea-animada.mp4" type="video/mp4" data-i18n="videoFallback"/>
                 Tu navegador no permite reproducir este video.
               </video>
             </div>
-            <p class="hero-copy">
+            <p class="hero-copy" data-i18n="aboutMe">
               Soy Effrey Guzmán, estudiante de desarrollo de software con
               experiencia creando proyectos responsive con HTML, CSS, JavaScript
               y Angular.
             </p>
-            <ul class="skills" aria-label="Tecnologías principales">
+            <ul class="skills" data-i18n="coreTechnologies" aria-label="Tecnologías principales">
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript</li>
@@ -330,16 +327,16 @@
               aria-hidden="true"
               tabindex="-1"
             >
-              <span class="success-icon" aria-hidden="true">✓</span>
+              <span class="success-icon" aria-hidden="true" data-i18n="successTitle">✓</span>
               <h3>¡Mensaje enviado correctamente!</h3>
-              <p>
+              <p data-i18n="successThanks" data-i18n-text="successReply">
                 Gracias por contactarme.<br />
                 Le responderé lo antes posible.
               </p>
             </div>
 
             <div class="form-field">
-              <label for="name">Nombre</label>
+              <label for="name" data-i18n="nameLabel">Nombre</label>
               <input
                 type="text"
                 id="name"
@@ -350,7 +347,7 @@
               />
             </div>
             <div class="form-field">
-              <label for="email">Correo electrónico</label>
+              <label for="email" data-i18n="emailLabel">Correo electrónico</label>
               <input
                 type="email"
                 id="email"
@@ -361,7 +358,7 @@
               />
             </div>
             <div class="form-field">
-              <label for="message">Mensaje</label>
+              <label for="message" data-i18n="messageLabel">Mensaje</label>
               <textarea
                 id="message"
                 name="message"
@@ -370,7 +367,7 @@
                 required
               ></textarea>
             </div>
-            <button class="btn" type="submit" id="submit-button">
+            <button class="btn" type="submit" id="submit-button" data-i18n="sendMessage">
               Enviar mensaje <span>↗</span>
             </button>
             <p class="form-status" aria-live="polite" id="form-status"></p>
@@ -378,8 +375,8 @@
         </section>
 
         <footer>
-          <p>&copy; 2026 Efrey Guzmán. Todos los derechos reservados.</p>
-          <a href="#home">Volver arriba ↑</a>
+          <p data-i18n="rights">&copy; 2026 Efrey Guzmán. Todos los derechos reservados.</p>
+          <a href="#home" data-i18n=" backToTop">Volver arriba ↑</a>
         </footer>
       </main>
     </div>

@@ -222,6 +222,6 @@ languageButtons.forEach((button) => {
 });
 
 const savedLanguage =
-    localStorage.getItem("portfolio-language") || "es";
+    localStorage.getItem("portfolio-language") || "en";
 
 changeLanguage(savedLanguage);
