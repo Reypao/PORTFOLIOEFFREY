@@ -13,12 +13,14 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
@@ -346,10 +348,10 @@
           </div>
         </section>
 
-        <!-- Contacto -->
+        <!-- video Trabajemos juntos -->
         <section class="section contact" id="contact">
           <div class="contact-copy">
-            <p class="eyebrow" data-i18n="contact">Contacto</p>
+            
             <div class="contact-animation">
               <video
                 class="contact-animation__video"
@@ -387,77 +389,83 @@
               <li>Angular</li>
             </ul>
           </div>
+        </section>
 
-          <form class="contact-form" id="contact-form">
-            <div
-              class="form-success-overlay"
-              id="form-success-overlay"
-              role="status"
-              aria-live="polite"
-              aria-hidden="true"
-              tabindex="-1"
-            >
-              <span
-                class="success-icon"
+        <!--Move Contact-->
+        <section class="section form-section" id="form-section">
+          <div class="form-section-container">
+            <form class="contact-form" id="contact-form">
+              <p class="eyebrow" data-i18n="contact">Contacto</p>
+              <div
+                class="form-success-overlay"
+                id="form-success-overlay"
+                role="status"
+                aria-live="polite"
                 aria-hidden="true"
-                data-i18n="successTitle"
-                >✓</span
+                tabindex="-1"
               >
-              <h3>¡Mensaje enviado correctamente!</h3>
-              <p data-i18n="successThanks" data-i18n-text="successReply">
-                Gracias por contactarme.<br />
-                Le responderé lo antes posible.
-              </p>
-            </div>
+                <span
+                  class="success-icon"
+                  aria-hidden="true"
+                  data-i18n="successTitle"
+                  >✓</span
+                >
+                <h3>¡Mensaje enviado correctamente!</h3>
+                <p data-i18n="successThanks" data-i18n-text="successReply">
+                  Gracias por contactarme.<br />
+                  Le responderé lo antes posible.
+                </p>
+              </div>
 
-            <div class="form-field">
-              <label for="name" data-i18n="nameLabel">Nombre</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                autocomplete="name"
-                placeholder="Tu nombre"
-                data-i18n-placeholder="namePlaceholder"
-                required
-              />
-            </div>
-            <div class="form-field">
-              <label for="email" data-i18n="emailLabel"
-                >Correo electrónico</label
+              <div class="form-field">
+                <label for="name" data-i18n="nameLabel">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Tu nombre"
+                  data-i18n-placeholder="namePlaceholder"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="email" data-i18n="emailLabel"
+                  >Correo electrónico</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="nombre@correo.com"
+                  data-i18n-placeholder="emailPlaceholder"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="message" data-i18n="messageLabel">Mensaje</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Cuéntame sobre tu proyecto…"
+                  data-i18n-placeholder="messagePlaceholder"
+                  required
+                >
+                </textarea>
+              </div>
+              <button
+                class="btn"
+                type="submit"
+                id="submit-button"
+                data-i18n="sendMessage"
               >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                placeholder="nombre@correo.com"
-                data-i18n-placeholder="emailPlaceholder"
-                required
-              />
-            </div>
-            <div class="form-field">
-              <label for="message" data-i18n="messageLabel">Mensaje</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Cuéntame sobre tu proyecto…"
-                data-i18n-placeholder="messagePlaceholder"
-                required
-              >
-              </textarea>
-            </div>
-            <button
-              class="btn"
-              type="submit"
-              id="submit-button"
-              data-i18n="sendMessage"
-            >
-              Enviar mensaje <span>↗</span>
-            </button>
-            <p class="form-status" aria-live="polite" id="form-status"></p>
-          </form>
+                Enviar mensaje <span>↗</span>
+              </button>
+              <p class="form-status" aria-live="polite" id="form-status"></p>
+            </form>
+          </div>
         </section>
 
         <!-- FOOTER -->
