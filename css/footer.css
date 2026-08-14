@@ -10,7 +10,7 @@
   --footer-white: #f8faf8;
 
   position: relative;
-  min-height: 650px;
+  min-height: 160px;
   padding: 45px 50px;
   overflow: hidden;
 
@@ -33,7 +33,7 @@
 .footer-layout {
   display: grid;
   width: min(1450px, 100%);
-  min-height: 520px;
+  min-height: 163px;
   grid-template-columns: 210px minmax(580px, 760px) 1fr;
   gap: 55px;
   align-items: start;
@@ -91,7 +91,7 @@
   z-index: 2;
   display: flex;
   width: 100%;
-  min-height: 500px;
+  min-height: 626px;
   flex-direction: column;
   padding: 45px 50px 48px;
 
@@ -181,7 +181,7 @@
   margin: 0 0 17px;
   padding: 0 5px 13px;
 
-  border-bottom: 2px solid rgba(169, 214, 192, 0.18);
+  border-bottom: 2px solid rgba(39, 54, 147, 0.793);
 
   color: rgb(5, 37, 8);
   font-family: "Nothing You Could Do", cursive;
@@ -213,21 +213,21 @@
   width: 100%;
   max-width: 620px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 
   /* Empuja el correo al fondo de la nota */
   margin-top: auto;
   padding: 25px 5px 0;
 
-  border-top: 1px dashed rgba(169, 214, 192, 0.32);
+  border-top: 1px dashed rgba(169, 214, 192, 0.551);
 }
 
 .footer-email-link {
   padding-bottom: 5px;
   overflow-wrap: anywhere;
 
-  color: rgba(92, 51, 3, 0.774);
+  color: rgba(40, 60, 4, 0.827);
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(1.05rem, 2.2vw, 1.45rem);
   font-weight: 400;
@@ -239,19 +239,19 @@
 }
 
 .footer-email-link:hover {
-  border-color: #b8e3cd;
-  color: #b8e3cd;
+  border-color: #126b3d;
+  color: #448512;
 }
 
 .copy-button {
   flex-shrink: 0;
   padding: 9px 17px;
 
-  border: 1px solid #a9d6c0;
+  border: 1px solid #1b7148;
   border-radius: 999px;
 
-  background-color: transparent;
-  color: #a9d6c0;
+  background-color: rgba(172, 255, 47, 0.538);
+  color: #01180d;
   cursor: pointer;
   font: inherit;
   font-size: 0.8rem;
