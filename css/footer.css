@@ -35,7 +35,7 @@
   width: min(1450px, 100%);
   min-height: 163px;
   grid-template-columns: 210px minmax(580px, 760px) 1fr;
-  gap: 55px;
+  gap: 24px;
   align-items: start;
   margin-inline: auto;
 }
@@ -45,9 +45,10 @@
 ========================= */
 
 .footer-meta {
-  padding-top: 40px;
+  padding-top: 122px;
   font-size: 0.9rem;
   line-height: 1.6;
+  font-weight: 100;
 }
 
 .footer-update {
@@ -57,11 +58,11 @@
 .footer-update span {
   display: block;
   margin-bottom: 4px;
-
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  
 }
 
 .footer-update time {
@@ -79,7 +80,9 @@
 ========================= */
 
 .footer-center {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* =========================
@@ -283,8 +286,17 @@
   z-index: 3;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: -35px;
+  align-items: center;
+  margin-top: -11px;
+  column-gap: 20px;
+}
+
+.footer-rights {
+    width: 100%;
+    margin: 24px 0 0;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
 }
 
 .footer-social-card {
