@@ -1,89 +1,70 @@
 /* =========================
-   FOOTER
+   FOOTER LAYOUT
 ========================= */
 
 .site-footer {
-  --footer-green: #a9d5c1;
-  --footer-green-light: #c8e5d7;
-  --footer-dark-green: #123f35;
-  --footer-black: #121715;
-  --footer-white: #f8faf8;
+    --footer-green: #a9d5c1;
+    --footer-green-light: #c8e5d7;
+    --footer-dark-green: #123f35;
+    --footer-black: #121715;
+    --footer-white: #f8faf8;
 
-  position: relative;
-  min-height: 160px;
-  padding: 45px 50px;
-  overflow: hidden;
+    position: relative;
 
-  background:
-    radial-gradient(
-      circle at 5% 15%,
-      rgba(255, 255, 255, 0.38),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      var(--footer-green-light) 0%,
-      var(--footer-green) 55%,
-      #8fc5ad 100%
-    );
+    padding: 70px 50px 35px;
 
-  color: var(--footer-dark-green);
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(255, 255, 255, 0.60),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            var(--footer-green-light) 0%,
+            var(--footer-green) 55%,
+            #8fc5ad 100%
+        );
+
+    color: var(--footer-dark-green);
 }
 
-.footer-layout {
-  display: grid;
-  width: min(1450px, 100%);
-  min-height: 163px;
-  grid-template-columns: 210px minmax(580px, 760px) 1fr;
-  gap: 24px;
-  align-items: start;
-  margin-inline: auto;
-}
 
 /* =========================
-   LEFT INFORMATION
+   MAIN LAYOUT
 ========================= */
 
-.footer-meta {
-  padding-top: 122px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  font-weight: 100;
+.footer-layout {
+    display: grid;
+
+    width: min(1450px, 100%);
+    margin-inline: auto;
+
+    grid-template-columns:
+        1fr
+        minmax(420px, 600px)
+        1fr;
+
+    align-items: center;
+
+    row-gap: 42px;
 }
 
-.footer-update {
-  margin-bottom: 34px;
-}
 
-.footer-update span {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  
-}
-
-.footer-update time {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.footer-meta > p {
-  margin: 0;
-}
-
-/* =========================
-   CENTER AREA
+  /* =========================
+   CENTER SOCIAL AREA
 ========================= */
 
 .footer-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    grid-column: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
 }
+
 
 /* =========================
    NOTE FROM EFFREY
@@ -282,13 +263,16 @@
 ========================= */
 
 .footer-social-links {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -11px;
-  column-gap: 20px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 22px;
+
+    margin: 0;
 }
 
 .footer-rights {
@@ -297,68 +281,54 @@
     text-align: center;
     line-height: 1.6;
     font-size: 20px;
+    display: block;
 }
 
 .footer-social-card {
-  display: flex;
-  width: 118px;
-  min-height: 125px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+    display: flex;
 
-  border: 7px solid var(--footer-white);
-  border-radius: 28px;
+    width: 86px;
+    height: 86px;
 
-  background-image:
-    linear-gradient(
-      rgba(5, 43, 39, 0.18),
-      rgba(5, 43, 39, 0.35)
-    ),
-    url("../imagen/dark-green-marble.png");
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    gap: 5px;
 
-  box-shadow: 0 18px 28px rgba(17, 62, 51, 0.22);
-  color: var(--footer-white);
-  overflow: hidden;
-  text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
 
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease,
-    box-shadow 0.25s ease;
-}
+    background:
+        rgba(248, 250, 248, 0.80);
 
-.footer-social-card:nth-child(1) {
-  transform: rotate(7deg);
-}
+    color: var(--footer-dark-green);
 
-.footer-social-card:nth-child(2) {
-  transform: rotate(-5deg) translateY(8px);
-}
+    box-shadow:
+        0 12px 25px rgba(18, 63, 53, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.80);
 
-.footer-social-card:nth-child(3) {
-  transform: rotate(5deg) translateY(6px);
-}
+    backdrop-filter: blur(8px);
 
-.footer-social-card:nth-child(4) {
-  transform: rotate(-7deg);
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .footer-social-card:hover {
   z-index: 5;
 
-  filter: brightness(1.18) saturate(1.1);
-
+  filter: brightness(1.12);
+  border-color: var(--footer-green);
   box-shadow:
-    0 24px 34px rgba(17, 62, 51, 0.32),
-    0 0 22px rgba(76, 190, 155, 0.28);
+    0 24px 34px rgba(40, 62, 51, 0.32),
+    0 0 22px rgba(200, 190, 155, 0.28);
 
-  transform: translateY(-12px) rotate(0);
+  transform: translateY(-6px);
 }
 
 .footer-social-card:focus-visible {
@@ -367,14 +337,14 @@
 }
 
 .footer-social-card svg {
-  width: 62px;
-  height: 62px;
+  width: 32px;
+  height: 40px;
   fill: currentColor;
 }
 
 .footer-social-card span {
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
