@@ -517,6 +517,7 @@ textarea {
 .btn:hover {
   transform: translateY(-2px);
   background: #783d22bd;
+  font-weight: 800;
 }
 
 .btn span {
