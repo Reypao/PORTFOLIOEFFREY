@@ -1,0 +1,266 @@
+.mobile-header,
+.menu-overlay {
+  display: none;
+}
+
+/* Tablet size */
+
+@media (max-width: 880px) {
+  .mobile-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 100;
+    display: flex;
+    height: 74px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    background: var(--primary-color);
+    padding: 0 20px;
+    backdrop-filter: blur(16px);
+  }
+
+  .mobile-header .brand strong {
+    color: var(--ink);
+  }
+
+  .menu-toggle {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-content: center;
+    gap: 7px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--navy);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 19px;
+    height: 1px;
+    background: white;
+    transition: 0.2s;
+  }
+
+  .menu-toggle.is-active span:first-child {
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+  .sidebar {
+    right: 14px;
+    left: auto;
+    width: min(84vw, 340px);
+    transform: translateX(calc(100% + 18px));
+    transition: transform 0.24s ease;
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .desktop-brand {
+    margin-top: 58px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    border: 0;
+    background: rgba(3, 14, 23, 0.55);
+    backdrop-filter: blur(3px);
+  }
+
+  .menu-overlay.is-visible {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 74px;
+  }
+
+  .section {
+    scroll-margin-top: 74px;
+    padding: 84px 24px;
+  }
+
+  .home {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 74px;
+  }
+
+  .home-visual {
+    min-height: 430px;
+  }
+
+  .profile-card {
+    width: min(76%, 360px);
+  }
+
+  .section-heading,
+  .contact,
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: start;
+    gap: 25px;
+  }
+
+  .contact {
+    min-height: auto;
+  }
+}
+
+/* mobile size */
+
+@media (max-width: 560px) {
+  .btn {
+    font-size: 30px;
+  }
+
+  .home {
+    position: relative;
+    min-height: calc(100vh - 74px);
+    display: flex;
+    align-items: center;
+    padding: 45px 20px;
+    overflow: hidden;
+    color: white;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(5, 7, 6, 0.96) 0%,
+        rgba(5, 7, 6, 0.88) 52%,
+        rgba(5, 7, 6, 0.25) 78%,
+        transparent 100%
+      ),
+      url("../imagen/imagenPortafolio1.png");
+
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 73% center;
+  }
+
+  .home::before {
+    display: none;
+  }
+
+  .home-content {
+    position: relative;
+    z-index: 2;
+    width: 68%;
+    max-width: 270px;
+  }
+
+  .home h1 {
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 0.95;
+  }
+
+  .home .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .home .hero-copy {
+    margin-top: 22px;
+    color: #d7d7d7;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 26px;
+  }
+
+  .hero-actions .btn {
+    min-height: 46px;
+    padding: 0 18px;
+    font-size: 16px;
+    letter-spacing: 1;
+  }
+
+  .text-link {
+    font-size: 11px;
+  }
+
+  .skills {
+    width: 65%;
+    gap: 6px;
+    margin-top: 30px;
+  }
+
+  .skills li {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+}
+
+.mobile-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-header .brand span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-header .brand strong,
+.mobile-header .brand small {
+  display: inline;
+  margin: 0;
+}
+
+.mobile-header .brand strong {
+  font-size: 14px;
+}
+
+.mobile-header .brand small {
+  font-size: 12px;
+  color: #13263f;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.brand strong,
+.brand small {
+  display: inline;
+}
+
+.brand span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-animation__video {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

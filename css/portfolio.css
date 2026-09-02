@@ -1,0 +1,159 @@
+.portfolio {
+  background: white;
+}
+
+.section-heading {
+  display: grid;
+  max-width: 1180px;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: end;
+  gap: 39px;
+  margin: 0 auto 62px;
+}
+
+.projects-container {
+  display: grid;
+  max-width: 1180px;
+  gap: 22px;
+  margin: auto;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+  overflow: hidden;
+  border: 1px solid #e1e5e2;
+  border-radius: 20px;
+  background: #f7f8f5;
+  transition: 0.2s;
+}
+
+.project-preview {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 350px;
+  overflow: hidden;
+}
+
+.project-preview img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(7, 24, 39, 0.1);
+}
+
+.project-visual {
+  display: flex;
+  min-height: 350px;
+  align-items: flex-end;
+  padding: 36px;
+  color: white;
+}
+
+.project-visual span {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.sprinkler {
+  background: linear-gradient(135deg, #0c4d62, #14331e);
+}
+
+.elite {
+  background: linear-gradient(135deg, #0c3d72, #6d302a);
+}
+
+.brujita {
+  background: linear-gradient(135deg, #4a2c81, #161325);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 3vw, 40px);
+}
+
+.project-info small {
+  color: #687571;
+  font-size: 13px;
+  font-weight: 770;
+  letter-spacing: 0.12em;
+}
+
+.project-info h3 {
+  margin: 22px 0 13px;
+  font-size: clamp(27px, 3vw, 38px);
+}
+
+.project-info p {
+  margin: 0;
+  color: var(--soft);
+  line-height: 1.75;
+}
+
+.project-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.project-btn {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--olive);
+  border-radius: 30px;
+  padding: 0 18px;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-btn:hover {
+  transform: translateX(-2px);
+}
+
+.project-btn-primary {
+  background: var(--light-blue);
+  color: white;
+}
+
+.project-btn-primary:hover {
+  background: transparent;
+  color: var(--olive);
+}
+
+.project-btn-secondary {
+  background: transparent;
+  color: var(--olive);
+}
+
+.project-btn-secondary:hover {
+  background: var(--light-blue);
+  color: white;
+}

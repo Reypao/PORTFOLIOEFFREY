@@ -29,6 +29,23 @@
     color: var(--footer-dark-green);
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 26px clamp(32px, 6vw, 100px);
+  color: #6f7b77;
+  font-size: 11px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: var(--ink);
+  font-weight: 800;
+}
 
 /* =========================
    MAIN LAYOUT

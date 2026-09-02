@@ -1,0 +1,161 @@
+/* ==============================
+STYLES HOMES BASIC
+================================= */
+
+.home {
+  position: relative;
+  display: flex;
+  min-height: 102vh;
+  align-items: center;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.42) 35%,
+      rgba(0, 0, 0, 0.12) 60%,
+      rgba(0, 0, 0, 0) 85%
+    ),
+    url("../imagen/imagenPortafolio1.png");
+
+  background-repeat: no-repeat;
+  /* Mantiene la altura y mueve el retrato a la derecha */
+  background-size: auto 100%;
+  background-position: calc(100% + 320px) center;
+  color: white;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 680px);
+}
+
+.home h1 {
+  margin: 0;
+  font-size: clamp(52px, 6.5vw, 135px);
+  letter-spacing: -0.065em;
+  line-height: 0.77;
+}
+
+/* Cada fragmento ocupa su propia línea */
+
+.hero-title span {
+  display: block;
+}
+
+/* Primera parte blanca */
+
+.title-white {
+  color: #ffffff;
+}
+
+/* Segunda parte verde grisáceo */
+
+.title-green {
+  color: #799087;
+}
+
+/* ==============================
+   ANIMACIÓN SECUENCIAL DEL HERO
+================================= */
+
+.hero-carousel {
+  overflow: visible;
+}
+
+/* Estado inicial de cada fragmento */
+
+.hero-fragment {
+  opacity: 0;
+  transform: translateX(-90px);
+  filter: blur(5px);
+  animation-name: heroSlideSequence;
+  animation-duration: 9s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+/* Fragmento 1:
+   Desarrollador web...
+*/
+
+.fragment-one {
+  animation-delay: 0s;
+}
+
+/* Fragmento 2:
+   Construyo sitios web
+*/
+
+.fragment-two {
+  animation-delay: 0.45s;
+}
+
+/* Fragmento 3:
+   claros, modernos...
+*/
+
+.fragment-three {
+  animation-delay: 0.9s;
+}
+
+/* Fragmento 4:
+   Botones
+*/
+
+.fragment-four {
+  animation-delay: 1.35s;
+}
+
+/* Movimiento completo */
+
+@keyframes heroSlideSequence {
+  /* Oculto al comenzar */
+
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+    filter: blur(5px);
+  }
+
+  /* Entra desde la izquierda */
+
+  8% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+
+  /* Permanece visible */
+
+  78% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+
+  /* Sale ligeramente hacia la derecha */
+
+  91% {
+    opacity: 0;
+    transform: translateX(45px);
+    filter: blur(3px);
+  }
+
+  /* Se prepara para comenzar otra vez */
+
+  100% {
+    opacity: 0;
+    transform: translateX(-90px);
+    filter: blur(5px);
+  }
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 38px;
+}

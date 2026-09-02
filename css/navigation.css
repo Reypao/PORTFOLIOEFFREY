@@ -1,0 +1,237 @@
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 50;
+
+  width: var(--sidebar);
+  height: 100vh;
+  color: white;
+
+  /* Capa oscura + imagen vertical completa */
+  background-image:
+    linear-gradient(rgba(1, 20, 17, 0.48), rgba(0, 12, 11, 0.62)),
+    url("../imagen/darkGreenMarble.png");
+
+  background-color: #031b17;
+
+  /* Evita que la imagen se repita o se corte */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  border-right: 1px solid rgba(201, 164, 92, 0.35);
+  box-shadow: 8px 0 35px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 38px 32px 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  place-items: center;
+
+  border: 2px solid #c9a45c;
+  border-radius: 50%;
+
+  background-image: url("../imagen/EFREYart.png");
+  background-repeat: no-repeat;
+  background-position: center 32%;
+  background-size: cover;
+
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+}
+
+.brand strong,
+.brand .small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.small {
+  margin-top: 3px;
+  color: #9fb0bc;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 1em;
+}
+
+.brand-text strong {
+  white-space: nowrap;
+}
+
+.brand-text small {
+  white-space: nowrap;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/*Language*/
+
+.language-selector {
+  margin-top: 20px;
+  display: flex;
+  width: 190px;
+  padding: 4px;
+  border: 1px solid #13602a;
+  border-radius: 30px;
+  background: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.language-btn {
+  display: flex;
+  flex: 1;
+  gap: 7px;
+  padding: 7px 9px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 25px;
+  background: transparent;
+  color: #aaafb6;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.65;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.language-btn:hover {
+  background-color: transparent;
+}
+
+.language-btn.active {
+  background: var(--primary-color);
+  color: white;
+  opacity: 1;
+}
+
+/* Idioma no seleccionado */
+.language-btn:hover:not(.active) {
+  color: white;
+  opacity: 1;
+}
+
+.language-flag {
+  display: block;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.language-btn:focus-visible {
+  outline: 2px solid rgba(21, 155, 211, 0.35);
+  outline-offset: 2px;
+}
+
+.language-btn[data-language="es"] {
+  order: 1;
+}
+
+.language-btn[data-language="en"] {
+  order: 2;
+  flex-direction: row-reverse;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 65px;
+  color: #9fb0bc;
+  font-size: 16px;
+}
+
+.availability span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(82, 224, 188, 0.12);
+}
+
+.nav-links {
+  display: grid;
+  gap: 5px;
+  margin: 35px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  border-radius: 10px;
+  padding: 14px 13px;
+  color: #9fb0bc;
+  font-size: 19px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.nav-links a span {
+  color: #8d5121;
+  font-size: 11px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  transform: translateX(3px);
+  background: #779087;
+  color: white;
+}
+
+.nav-links a.active::after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: "";
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  color: #9c4e2f;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.sidebar-footer p {
+  margin: 0;
+}
