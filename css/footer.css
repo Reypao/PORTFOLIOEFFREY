@@ -437,7 +437,7 @@ footer a {
 
 /* =========================
    TABLET
-========================= */
+=========================
 
 @media (max-width: 1100px) {
   .site-footer {
@@ -459,95 +459,4 @@ footer a {
     min-height: 135px;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 760px) {
-  .site-footer {
-    min-height: auto;
-    padding: 55px 18px 28px;
-  }
-
-  .footer-layout {
-    display: flex;
-    min-height: auto;
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .footer-meta {
-    order: 2;
-    width: 100%;
-    padding-top: 0;
-    text-align: center;
-  }
-
-  .footer-update {
-    margin-bottom: 15px;
-  }
-
-  .footer-center {
-    order: 1;
-  }
-
-  .footer-introduction {
-    min-height: auto;
-    padding: 38px 24px 58px;
-
-    transform: rotate(-0.5deg);
-  }
-
-  .note-heading {
-    font-size: 0.72rem;
-  }
-
-  .note-message p {
-    padding-bottom: 11px;
-    font-size: clamp(1.2rem, 6vw, 1.6rem);
-  }
-
-  .note-message .note-invitation {
-    font-size: clamp(1.4rem, 7vw, 1.9rem);
-  }
-
-  .footer-email-row {
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 28px;
-    text-align: center;
-  }
-
-  .footer-email-link {
-    max-width: 100%;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .footer-social-links {
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    margin-top: 25px;
-  }
-
-  .footer-social-card {
-    width: 130px;
-    min-height: 120px;
-
-    border-width: 5px;
-    border-radius: 22px;
-  }
-
-  .footer-social-card svg {
-    width: 48px;
-    height: 48px;
-  }
-
-  .footer-back-to-top {
-    order: 3;
-    align-self: center;
-    margin: 0;
-  }
-}
+*/

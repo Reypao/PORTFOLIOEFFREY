@@ -84,4 +84,119 @@
     padding: 6px 10px;
     font-size: 9px;
   }
+
+  .form-section {
+    padding-top: 0;
+
+  }
+
+  .form-section-container {
+    grid-template-columns: 1fr;
+
+  }
+
+  .form-section .footer-note {
+    order: -1;
+  }
+
+  .form-section .contact-form {
+    width: 100%;
+  }
+
+  /*Styles Mobile footer*/
+
+  .site-footer {
+    min-height: auto;
+    padding: 55px 18px 28px;
+  }
+
+  .footer-layout {
+    display: grid;
+    min-height: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 16px;
+  }
+
+  .footer-center {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+
+  .footer-introduction {
+    min-height: auto;
+    padding: 38px 24px 58px;
+
+    transform: rotate(-0.5deg);
+  }
+
+  .note-heading {
+    font-size: 0.72rem;
+  }
+
+  .note-message p {
+    padding-bottom: 11px;
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+  }
+
+  .note-message .note-invitation {
+    font-size: clamp(1.4rem, 7vw, 1.9rem);
+  }
+
+  .footer-email-row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .footer-email-link {
+    max-width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .footer-social-links {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .footer-social-card {
+    width: 100%;
+    min-height: 78px;
+    border-width: 2px;
+    border-radius: 14px;
+    padding: 8px 4px;
+  }
+
+  .footer-social-card svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-location {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+
+  }
+
+  .footer-rights {
+    grid-column: 1/-1;
+    grid-row: 3;
+    margin: 0;
+    text-align: center;
+  }
+
+  .footer-back-to-top {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: end;
+    margin: 0;
+  }
+
 }
