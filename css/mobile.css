@@ -1,0 +1,87 @@
+/* mobile size */
+
+@media (max-width: 560px) {
+  .btn {
+    font-size: 30px;
+  }
+
+  .home {
+    position: relative;
+    min-height: calc(100vh - 74px);
+    display: flex;
+    align-items: center;
+    padding: 45px 20px;
+    overflow: hidden;
+    color: white;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(5, 7, 6, 0.96) 0%,
+        rgba(5, 7, 6, 0.88) 52%,
+        rgba(5, 7, 6, 0.25) 78%,
+        transparent 100%
+      ),
+      url("../imagen/imagenPortafolio1.png");
+
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 73% center;
+  }
+
+  .home::before {
+    display: none;
+  }
+
+  .home-content {
+    position: relative;
+    z-index: 2;
+    width: 68%;
+    max-width: 270px;
+  }
+
+  .home h1 {
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 0.95;
+  }
+
+  .home .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .home .hero-copy {
+    margin-top: 22px;
+    color: #d7d7d7;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 26px;
+  }
+
+  .hero-actions .btn {
+    min-height: 46px;
+    padding: 0 18px;
+    font-size: 16px;
+    letter-spacing: 1;
+  }
+
+  .text-link {
+    font-size: 11px;
+  }
+
+  .skills {
+    width: 65%;
+    gap: 6px;
+    margin-top: 30px;
+  }
+
+  .skills li {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+}
