@@ -70,6 +70,11 @@
     letter-spacing: 1;
   }
 
+  .projects-container .project-card:first-child .project-preview img {
+    object-position: 50% top;
+
+  }
+
   .text-link {
     font-size: 11px;
   }
